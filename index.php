@@ -22,6 +22,7 @@
        .h-font{
         font-family: 'Cinzel', serif;
         }
+
         input::-webkit-outer-spin-button,
         input::-webkit-inner-spin-button {
         -webkit-appearance: none;
@@ -31,7 +32,27 @@
         input[type=number] {
         -moz-appearance: textfield;
         }
-        
+
+        .custom-bg{
+            background-color: #473B15;
+        }
+
+        .custom-bg:hover{
+            background-color: #A88411;
+        }
+        .availability-form{
+            margin-top: -50px;
+            z-index: 2;
+            position: relative;
+        }
+
+        @media screen and (max-width: 575px){
+            .availability-form{
+            margin-top: 25px;
+            padding: 0 35px;
+            }
+        }
+
     </style>
     
   </head>
@@ -194,28 +215,130 @@
 
         <!--Check Availability -->
 
-    <div class="container">
+    <div class="container availability-form">
         <div class="row">
             <div class="col-lg-12 bg-white shadow p-4 rounded">
-                <h5>Check Booking Availability</h5>
+                <h5 class="mb-4">Check Booking Availability</h5>
                 <form>
-                    <div class="row">
-                        <div class="col-lg-3">
+                    <div class="row align-items-end">
+                        <div class="col-lg-3 mb-3">
                             <label class="form-label" style="font-weight: 500;">Check-in</label>
                             <input type="date" class="form-control shadow-none">
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-3 mb-3">
                             <label class="form-label" style="font-weight: 500;">Check-out</label>
                             <input type="date" class="form-control shadow-none">
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-3 mb-3">
                             <label class="form-label" style="font-weight: 500;">Adult</label>
+                            <select class="form-select shadow-none">
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-2 mb-3">
+                            <label class="form-label" style="font-weight: 500;">Children</label>
+                            <select class="form-select shadow-none">
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-1 mb-lg-3 mt-2">
+                            <button type="submit" class="btn text-white shadow-none custom-bg">Submit</button>
                         </div>
                     </div>
                 </form>
             </div>
         </div>
     </div>
+
+        <!--Rooms -->
+        <h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font">OUR ROOMS</h2>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 my-3">
+                    <div class="card border-0 shadow" style="max-width: 350px; margin: auto;">
+                        <img src="images/rooms/1.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5>Single Room</h5>
+                            <h6 class="mb-2">PHP 2,300/night</h6>
+                            <div class="rating">
+                                <span class="badge rounded-pill bg-light">
+                                    <!-- <h6 class="mb-1">Rate</h6> -->
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                </span>
+                            </div>
+                            <p class="card-text mt-2">Inclusive of pool and gym use, and one breakfast serving for one person.</p>
+                            <div class="d-flex justify-content-evenly mb-2">
+                                <a href="#" class="btn btn-sm text-white custom-bg">Book Now</a>
+                                <a href="#" class="btn btn-sm btn-outline-dark">More Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 my-3"> <!-- Need to revise details -->
+                    <div class="card border-0 shadow" style="max-width: 350px; margin: auto;">
+                        <img src="images/rooms/6.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5>Single Room</h5>
+                            <h6 class="mb-2">PHP 4,200/night</h6>
+                            <div class="rating">
+                                <span class="badge rounded-pill bg-light">
+                                    <!-- <h6 class="mb-1">Rate</h6> -->
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                </span>
+                            </div>
+                            <p class="card-text mt-2">Inclusive of pool and gym use, and one breakfast serving for one person.</p>
+                            <div class="d-flex justify-content-evenly mb-2">
+                                <a href="#" class="btn btn-sm text-white custom-bg">Book Now</a>
+                                <a href="#" class="btn btn-sm btn-outline-dark">More Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 my-3"> <!-- Need to revise details -->
+                    <div class="card border-0 shadow" style="max-width: 350px; margin: auto;">
+                        <img src="images/rooms/3.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5>Single Room</h5>
+                            <h6 class="mb-2">PHP 6,300/night</h6>
+                            <div class="rating">
+                                <span class="badge rounded-pill bg-light">
+                                    <!-- <h6 class="mb-1">Rate</h6> -->
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                </span>
+                            </div>
+                            <p class="card-text mt-2">Inclusive of pool and gym use, and one breakfast serving for one person.</p>
+                            <div class="d-flex justify-content-evenly mb-2">
+                                <a href="#" class="btn btn-sm text-white custom-bg">Book Now</a>
+                                <a href="#" class="btn btn-sm btn-outline-dark">More Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+
+                <div class="col-lg-12 text-center mt-5">
+                    <a href="#" class="btn btn-sm btn-outline-dark rounded-1 fw-bold shadow-none">More Rooms</a>
+                </div>
+            </div>
+        </div>
 
     <br><br><br>
     <br><br><br>
